@@ -33,7 +33,7 @@ N = 15
 b = []
 c = []
 d = []
-print("Fibonacci:")
+print("Фибоначчи через массив")
 for i in range(1, N):
     b.append(i)
     time = sum(timeit.timeit(lambda: fibonacci(i), number=1)
@@ -41,12 +41,12 @@ for i in range(1, N):
     k = time/10000
     c.append(k)
     print("При i = ", i, "Число =", fibonacci(i), "время = ", k)
-print("Fibonaccibest:")
+print("Фибоначчи")
 for i in range(1, N):
     time = sum(timeit.timeit(lambda: fibonaccibest(i), number=1)
                for j in range(10000))
     l = time/10000
     d.append(l)
-    print("При i = ", i, "Число =", fibonaccibest(i), "время = ", l)
+    print("При i = " + ",", i, "Число = " + ",", fibonaccibest(i), "Время = "+ ",", l)
 
 create_graph(b, c, d)
